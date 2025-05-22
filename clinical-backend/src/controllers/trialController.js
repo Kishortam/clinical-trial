@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Load JSON once
-// const dataPath = path.join(__dirname, '../sample-data.json');  // previously
-const dataPath = path.join(__dirname, 'sample-data.json');
+const dataPath = path.join(__dirname, '../sample-data.json');  // previously
+// const dataPath = path.join(__dirname, 'sample-data.json');
 const trials = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
 
