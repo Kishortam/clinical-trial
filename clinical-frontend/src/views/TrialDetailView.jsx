@@ -15,8 +15,14 @@ export default function TrialDetailView() {
   const navigate = useNavigate();
   const [trial, setTrial] = useState(null);
 
+  // useEffect(() => {
+  //   axios.get(`http://localhost:5000/api/trials/${nctId}`)
+  //     .then(res => setTrial(res.data))
+  //     .catch(err => console.error(err));
+  // }, [nctId]);
+
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/trials/${nctId}`)
+    axios.get(`https://clinical-backend-5gb4.onrender.com/api/trials/${nctId}`)
       .then(res => setTrial(res.data))
       .catch(err => console.error(err));
   }, [nctId]);

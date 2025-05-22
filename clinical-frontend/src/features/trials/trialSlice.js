@@ -21,7 +21,7 @@ const saveSelectedIds = (ids) => {
 export const fetchTrials = createAsyncThunk(
   'trials/fetchTrials',
   async ({ page, limit }) => {
-    const res = await axios.get(`http://localhost:5000/api/trials?page=${page}&limit=${limit}`);
+    const res = await axios.get(`https://clinical-backend-5gb4.onrender.com/api/trials?page=${page}&limit=${limit}`);
     return res.data;
   }
 );

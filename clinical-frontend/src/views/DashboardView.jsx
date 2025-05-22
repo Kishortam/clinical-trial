@@ -24,7 +24,7 @@ export default function DashboardView() {
   useEffect(() => {
     if (selectedIds.length) {      // If trials are selected
       const idsParam = selectedIds.join(',');
-      axios.get(`http://localhost:5000/api/dashboard-data?ids=${idsParam}`)
+      axios.get(`https://clinical-backend-5gb4.onrender.com/api/dashboard-data?ids=${idsParam}`)
         .then(res => setDashboardData(res.data))
         .catch(err => console.error(err));
     }

@@ -23,7 +23,7 @@ export default function ScoreView() {
     if (selectedIds.length) {
       setLoading(true);
       const idsParam = selectedIds.join(',');
-      axios.get(`http://localhost:5000/api/score-data?ids=${idsParam}`)
+      axios.get(`https://clinical-backend-5gb4.onrender.com/api/score-data?ids=${idsParam}`)
         .then(res => setScoreData(res.data))
         .catch(err => console.error(err))
         .finally(() => setLoading(false));
