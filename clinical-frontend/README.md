@@ -1,4 +1,158 @@
-# Getting Started with Create React App
+## 🧬 Clinical Trial Similarity Viewer
+
+A full-stack web app that helps researchers analyze, compare, and visualize clinical trial data using similarity scores and eligibility metrics.
+
+---
+
+## 🚀 Live Demo
+
+* **Frontend:** [https://clinical-frontend.onrender.com](https://clinical-frontend.onrender.com)
+* **Backend API:** [https://clinical-backend-5gb4.onrender.com](https://clinical-backend-5gb4.onrender.com)
+
+---
+
+## 🛠 Tech Stack
+
+| Layer    | Technology                           |
+| -------- | ------------------------------------ |
+| Frontend | React.js, Redux Toolkit, Material-UI |
+| Backend  | Node.js, Express.js                  |
+| Charts   | Recharts                             |
+| State    | Redux + localStorage                 |
+| Hosting  | Render (Frontend & Backend)          |
+
+---
+
+## 🧩 Features
+
+* 🔍 **List View:** Paginated clinical trials with selection
+* 📊 **Dashboard View:** Interactive bar and pie charts for eligibility distribution
+* 🧠 **Score View:** Similarity scores between selected trials with visual indicators
+* 🧾 **Trial Detail Page:** Full metadata and chart per trial
+* 💾 **Persistent Selection:** Maintains selected trials across views and reloads
+
+---
+
+## 📦 Installation (Local Development)
+
+### 1. Clone the Repositories
+
+```bash
+git clone https://github.com/Kishortam/clinical-trial/tree/main/clinical-backend
+git clone https://github.com/Kishortam/clinical-trial/tree/main/clinical-frontend
+```
+
+---
+
+### 2. Run the Backend
+
+```bash
+cd clinical-backend
+npm install
+npm start
+```
+
+* App runs on `http://localhost:5000`
+* Sample data is served from `sample-data.json`
+
+---
+
+### 3. Run the Frontend
+
+```bash
+cd clinical-frontend
+npm install
+```
+
+Create `.env` file:
+
+```env
+REACT_APP_API_BASE_URL=http://localhost:5000/api
+```
+
+Then run:
+
+```bash
+npm start
+```
+
+---
+
+## 🌐 Deployment on Render
+
+### 🔁 Backend (Node + Express)
+
+1. Push backend repo to GitHub
+2. Go to [https://render.com](https://render.com)
+3. Create a new Web Service
+4. Set:
+
+   * Build Command: `npm install`
+   * Start Command: `npm start`
+5. Get the live API URL (e.g. `https://clinical-backend.onrender.com`)
+
+---
+
+### 🎨 Frontend (React)
+
+1. Push frontend repo to GitHub
+2. Go to Render → New → Static Site
+3. Set:
+
+   * Build Command: `npm run build`
+   * Publish Directory: `build`
+4. Add environment variable:
+
+```env
+REACT_APP_API_BASE_URL=https://clinical-backend.onrender.com/api
+```
+
+---
+
+## 📁 Folder Structure Highlights
+
+```bash
+clinical-frontend/
+├── src/
+│   ├── views/           # ListView, DashboardView,  ScoreView, TrialDetailView
+│   ├── features/        # Redux slices and logic
+│   ├── components/      # Reusable UI elements
+│   └── App.js           # Routes and layout
+
+clinical-backend/
+├── src/
+│   ├── routes/          # Express routes
+│   ├── controllers/     # Controller logic
+│   ├── sample_data.json # Static trial dataset
+│   └── index.js         # Entry point
+```
+
+---
+
+## ✍️ Author
+
+**Kishor Sunil Tambe**
+Frontend & Full-Stack Developer
+Email: \[[kishortam@gmail.com](mailto:kishortam@gmail.com)]
+GitHub: [https://github.com/Kishortam](https://github.com/Kishortam)
+
+---
+**Commands to Run Project Locally**
+Run backend using command => npm run dev
+(Server will start at Port https://localhost:5000)
+
+Run frontend using command => npm start
+(Server will start at Port https://localhost:3000)
+
+
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +221,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
